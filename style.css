@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans&family=Poppins:wght@300;400;700&family=Roboto:ital,wght@0,400;1,100&family=Ubuntu:ital,wght@1,300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins" sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background: rgb(39, 127, 209);
+}
+.container{
+    max-width: 500px;
+    width: 100%;
+    background: #fff;
+    padding: 25px 30px;
+    border-radius: 5px;
+    box-shadow: 0 0 20px 2px rgba(0,0,0,0.5);
+}
+.container .title{
+    font-size: 25px;
+    font-family: 'Poppins';
+    font-weight: 500;
+    position: relative;
+}
+.container .title::before{
+    content: '';
+    position: absolute;
+    top: 35px;
+    height: 3px;
+    width: 30px;
+    background: #9b59b6;
+}
+.container form .user-details{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 10px 0 10px 0;
+}
+form .user-details .input-box{
+    margin-bottom: 10px;
+    width: calc(100%/2-20px);
+}
+input::-ms-reveal { 
+    display: none; 
+}
+.user-details .input-box .details{
+    display: block;
+    font-weight: 500;
+    font-family: 'Poppins';
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.user-details .input-box input{
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border-radius: 15px;
+    background: #f3f2f2;
+    border: 1px solid #e4e3e3;
+    padding-left: 15px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+::placeholder{
+    color:#999898 ;
+}
+.user-details .input-box input:focus,
+.user-details .input-box input:valid{
+    border-color: #9b59b6;
+}
+form .gender-details .gender-title{
+    font-size: 20px;
+    font-weight: 500;
+}
+form .gender-details .category{
+    display: flex;
+    width: 80%;
+    margin: 14px 0;
+    justify-content: space-between;
+}
+.gender-details .category label{
+    display: flex;
+    align-items: center;
+}
+.gender-details .category .dot{
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 4px solid rgb(207, 205, 205);
+}
+#dot-1:checked ~ .category label .one,
+#dot-2:checked ~ .category label .two,
+#dot-3:checked ~ .category label .three,
+#dot-4:checked ~ .category label .four{
+   border-color: #d9d9d9;
+   background: #9b59b6;
+}
+form input[type="radio"]{
+    display: none;
+}
+form .button{
+    margin-top: 45px;
+    margin-bottom: 30px;
+    height: 45px;
+}
+form .button input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border-radius: 15px;
+    cursor: pointer;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    background: #2873d4;
+    box-shadow: 0 0 5px 2px rgba(0,0,0,0.5);
+}
+p{
+    margin-left: 100px;
+    font-family: "Poppins";
+    font-size: 15px;
+}
+p a{
+   color: rgb(48, 88, 221);
+   margin-left: 10px;
+}
+hr{
+    margin-top: 15px;
+    margin-bottom: 4px;
+}
+.media{
+    display:flex;
+    justify-content: center;
+    background-color: rgba(255,255,255,0.2);
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+.media div{
+    border-radius: 50%;
+    margin: 15px 15px;
+}
+.google{
+    background: rgb(255, 38, 0);
+}
+.linkedin{
+    background: rgb(50, 92, 228);
+}
+.twitter{
+    background: rgb(57, 187, 219);
+}
+.media a{
+    height: 10px;
+    width: 30px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+.media a i{
+    color: white;
+}
+.media i:hover{
+    color: #24262b;
+}
+@media (max-width:584px) {
+    .container{
+        max-width: 100%;
+    }
+    form .user-details .input-box{
+        margin-bottom: 15px;
+        width: 100%;
+    }
+    form .gender-details .category{
+        width: 100%;
+    }
+    .container form .user-details{
+        max-height: 300px;
+        overflow-y: scroll;
+    }
+    .user-details::-webkit-scrollbar{
+        width: 0;
+    }
+}
